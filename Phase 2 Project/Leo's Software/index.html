@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Leo's Software</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="Demo of Minimalist Newsletter Subscription Form" />
+	<meta name="robots" content="all">
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="msapplication-tap-highlight" content="no"/>
+	<link rel="canonical" href="index.html">
+	<link rel="icon" href="../../theme/img/favicon.ico" />
+	<link rel="stylesheet" href="../../theme/css/_reset.css" />
+	<link rel="stylesheet" href="http://osvaldas.info/main.css" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Bitter:400,700">
+	<style>
+
+		html
+		{
+			background-image: url(http://static.wallpedes.com/wallpaper/unforgettable/unforgettable-wide-desktop-wallpaper-for-free-download-here-wallpaper-wide-direct-hd-download-for-iphone-ipad-borders-free-mobile-3d.jpg);
+			background-size: 100%;
+		}
+			body
+			{
+				font-family: 'Bitter', serif;
+				padding: 1.25rem; /* 20 */
+			}
+
+			h1
+			{
+				font-size: 50px;
+				text-align: center;
+			}
+
+			h5
+			{
+				font-size: 35px;
+				text-align: center;
+			}
+
+			p{
+				font-size: 110%;
+				text-align: center;
+				width: 100%;
+				max-width: 26.25rem; /* 420 */
+				height: 3.75rem; /* 60 */
+				position: absolute;
+				top: 46%;
+				left: 52%;
+				margin: -1.875rem 0 0 -13.125rem; /* 30 210 */
+			}
+
+			.newsletter
+			{
+				width: 100%;
+				max-width: 26.25rem; /* 420 */
+				height: 3.75rem; /* 60 */
+				font-size: 1.25rem; /* 20 */
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin: -1.875rem 0 0 -13.125rem; /* 30 210 */
+			}
+				.newsletter input
+				{
+					-webkit-transition: color .25s ease, background-color .25s ease, border-color .25s ease;
+					-moz-transition: color .25s ease, background-color .25s ease, border-color .25s ease;
+					-ms-transition: color .25s ease, background-color .25s ease, border-color .25s ease;
+					-o-transition: color .25s ease, background-color .25s ease, border-color .25s ease;
+					transition: color .25s ease, background-color .25s ease, border-color .25s ease;
+				}
+				.newsletter-email
+				{
+					width: 100%;
+					height: 100%;
+					color: #ffde00;
+					background-color: #63614c;
+					border: 2px solid transparent;
+					padding: 0 5rem 0 1.25rem; /* 80 20 */
+
+					white-space: nowrap;
+					overflow: hidden;
+					-webkit-text-overflow: ellipsis;
+					-moz-text-overflow: ellipsis;
+					-ms-text-overflow: ellipsis;
+					-o-text-overflow: ellipsis;
+					text-overflow: ellipsis;
+				}
+					.newsletter-email::-webkit-input-placeholder	{ color: #a49c54 !important; }
+					.newsletter-email:-moz-placeholder				{ color: #a49c54 !important; }
+					.newsletter-email::-moz-placeholder				{ color: #a49c54 !important; }
+					.newsletter-email:-ms-input-placeholder			{ color: #a49c54 !important; }
+
+					.newsletter-email:hover
+					{
+						border-color: #494736;
+					}
+					.newsletter-email:focus
+					{
+						color: #494736;
+						background-color: transparent;
+						border-color: #494736;
+					}
+
+				.newsletter-submit
+				{
+					height: 100%;
+					font-weight: 700;
+					color: #ffde00;
+					background-color: #494736;
+					display: none;
+					position: absolute;
+					top: 0;
+					right: 0;
+					padding: 0 1.25rem; /* 20 */
+
+					-webkit-animation: appear-from-inside .25s ease, fade-in .25s linear;
+					-moz-animation: appear-from-inside .25s ease, fade-in .25s linear;
+					-o-animation: appear-from-inside .25s ease, fade-in .25s linear;
+					animation: appear-from-inside .25s ease, fade-in .25s linear;
+
+					-webkit-transform-origin: right center;
+					-moz-transform-origin: right center;
+					-o-transform-origin: right center;
+					transform-origin: right center;
+				}
+					.newsletter-submit:hover,
+					.newsletter-submit:focus
+					{
+						color: #fff;
+					}
+					.newsletter--active .newsletter-submit
+					{
+						display: block;
+					}
+
+		@-webkit-keyframes appear-from-inside
+		{
+			from	{ -webkit-transform: scale( 0 ); }
+			75%		{ -webkit-transform: scale( 1.1 ); }
+			to		{ -webkit-transform: scale( 1 ); }
+		}
+		@-moz-keyframes appear-from-inside
+		{
+			from	{ -moz-transform: scale( 0 ); }
+			75%		{ -moz-transform: scale( 1.1 ); }
+			to		{ -moz-transform: scale( 1 ); }
+		}
+		@-o-keyframes appear-from-inside
+		{
+			from	{ -o-transform: scale( 0 ); }
+			75%		{ -o-transform: scale( 1.1 ); }
+			to		{ -o-transform: scale( 1 ); }
+		}
+		@keyframes appear-from-inside
+		{
+			from	{ transform: scale( 0 ); }
+			75%		{ transform: scale( 1.1 ); }
+			to		{ transform: scale( 1 ); }
+		}
+
+		@media screen and ( max-width: 30em ) /* 480 */
+		{
+			.newsletter
+			{
+				position: relative;
+				top: auto;
+				left: auto;
+				margin: 0;
+			}
+		}
+
+	</style>
+</head>
+
+<body>
+
+
+
+<h1>LEO's Software</h1>
+<h5>Great Stuffs</h5>
+<!--
+	DEMO
+-->
+<br><br><br><br><br><br><br><br><br><br>
+<p>Get in touch with us</p>
+<form class="newsletter" autocomplete="off" novalidate>
+	<input type="email" value="" placeholder="Enter your email address" tabindex="1" class="newsletter-email" />
+	<input type="submit" value="OK" tabindex="2" class="newsletter-submit" />
+</form>
+
+
+
+<!--
+	LAST BITS
+-->
+
+<script src="http://osvaldas.info/main.js"></script>
+<script>
+
+;( function( window, document, undefined )
+{
+	'use strict';
+
+	var form		= '.newsletter',
+		className	= 'newsletter--active',
+		email		= 'input[type="email"]',
+
+		addEventListener = function( element, event, handler )
+		{
+			element.addEventListener ? element.addEventListener( event, handler ) : element.attachEvent( 'on' + event, function(){ handler.call( element ); });
+		},
+		forEach = function( elements, fn )
+		{
+			for( var i = 0; i < elements.length; i++ ) fn( elements[ i ], i );
+		},
+		addClass = function( element, className )
+		{
+			element.classList ? element.classList.add( className ) : element.className += ' ' + className;
+		},
+		removeClass = function( element, className )
+		{
+			element.classList ? element.classList.remove( className ) : element.className += element.className.replace( new RegExp( '(^|\\b)' + className.split( ' ' ).join( '|' ) + '(\\b|$)', 'gi' ), ' ' );
+		};
+
+	forEach( document.querySelectorAll( form ), function( $form )
+	{
+		var $email = $form.querySelectorAll( email );
+
+		if( $email.length )
+		{
+			$email = $email[ 0 ];
+			addEventListener( $email, 'keyup', function()
+			{
+				$email.value != '' && /^([\w-\.]+@([\w-]+\.)+[\w-]{2,12})?$/.test( $email.value ) ? addClass( $form, className ) : removeClass( $form, className );
+			});
+		}
+	});
+})( window, document );
+
+/*
+
+jQuery version:
+
+$( function( $, window, document, undefined )
+{
+	'use strict';
+
+	var form		= '.newsletter',
+		className	= 'newsletter--active',
+		email		= 'input[type="email"]';
+
+	$( form ).each( function()
+	{
+		var $form	= $( this ),
+			$email	= $form.find( email );
+
+		$email.on( 'keyup.addClassWhenEmail', function()
+		{
+			$form.toggleClass( className, $email.val() != '' && /^([\w-\.]+@([\w-]+\.)+[\w-]{2,12})?$/.test( $email.val() ) );
+		});
+	});
+})( jQuery, window, document );
+
+*/
+
+</script>
+
+<script>var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-7572727-1']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();</script>
+
+
+
+
+</body>
+
+</html>
